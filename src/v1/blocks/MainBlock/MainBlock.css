@@ -1,0 +1,80 @@
+.main-block{
+    z-index: 0;
+    position: relative;
+    padding-bottom: 130px;
+}
+
+.mood-img{
+    width: 100%;
+    border-radius: 32px;
+    min-height: 560px;
+    background-image: url("../../assets/png/mood.png");
+    background-position: center;
+
+}
+
+.game-begin{
+    color: var(--gray);
+    text-align: center;
+    font-family: 'DrukWideCyr-Medium', sans-serif;
+    font-size: 64px;
+    font-weight: 500;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(-50% - 30px), -50%);
+    min-width: 500px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0; }
+}
+
+.game-begin::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 40px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--main);
+    animation: blink 1.5s ease-in-out infinite;
+}
+
+@media (max-width:1750px) {
+    .game-begin{
+        font-size: 53px;
+    }
+    .game-begin::before {
+        content: "";
+        margin-right: 33px;
+        width: 20px;
+        height: 20px;
+    }
+
+}
+
+@media (max-width:900px) {
+    .game-begin{
+        font-size: 32px;
+        transform: translate(calc(-50% - 10px), -50%);
+    }
+    .game-begin::before {
+        content: "";
+        margin-right: 16px;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+    }
+    .mood-img{
+        min-height: 640px;
+        border-radius: 24px;
+    }
+    .main-block{
+        padding-bottom: 80px;
+    }
+
+}

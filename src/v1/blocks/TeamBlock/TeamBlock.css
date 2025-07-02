@@ -1,0 +1,233 @@
+.team-block {
+    z-index: 2;
+    position: relative;
+    width: 100%;
+}
+
+.team-block .arrow-sub-title {
+    bottom: 60px;
+}
+
+.team-image {
+    width: 100%;
+}
+
+.team-block > .block-title {
+    position: absolute;
+    margin: 60px var(--padd) 0;
+}
+
+.dots {
+    display: flex;
+    justify-content: space-around;
+    width: 82vw;
+    position: absolute;
+    top: 42%;
+    z-index: 1;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.dot-wrapper {
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.dot, .ring {
+    pointer-events: none;
+}
+
+.dot-wrapper::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: calc(100% + 100px);
+    height: calc(100% + 100px);
+    background: transparent;
+    pointer-events: auto;
+}
+
+.dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    background-color: var(--main);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+}
+
+.ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    border: 1px solid var(--main);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.dot-wrapper:hover .ring {
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+.popup {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 8px) translateY(-10px);
+    width: 210px;
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    border-radius: 16px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    z-index: 3;
+    padding: 24px 32px;
+}
+
+.popup-title {
+    text-align: center;
+    font-family: 'DrukWideCyr-Medium', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: var(--main);
+}
+
+.popup-role {
+    margin: 16px 0 36px;
+    font-family: 'DrukWideCyr-Medium', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.popup-list {
+    color: var(--gray);
+    font-family: 'DrukWideCyr-Medium', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.popup-list li {
+    font-size: 13px;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.dot-wrapper:hover .popup {
+    opacity: 1;
+    transform: translate(-50%, 8px) translateY(0);
+    pointer-events: auto;
+}
+
+.team-grid {
+    padding: 40px var(--padd);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 32px;
+}
+
+.teammate {
+    position: relative;
+}
+
+.teammate-img {
+    width: 100%;
+    height: 225px;
+    background-image: url("../../assets/png/teammate-ex.png");
+    border-radius: 8px;
+    background-position: center;
+    background-size: 100%;
+}
+
+.teammate-title{
+    color: var(--black);
+    text-align: left;
+    font-family: 'DrukWideCyr-Medium', sans-serif;
+    font-size: 14px;
+    margin-top: 8px;
+    font-weight: 500;
+}
+.teammate-role {
+    color: #808080;
+    text-align: left;
+    font-family: 'DrukWideCyr-Medium', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.teammate-circle {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #808080;
+    transition: background-color 0.3s;
+}
+
+.teammate-circle.open {
+    width: 8px;
+    height: 8px;
+    background-color: var(--main);
+}
+
+.teammate-list {
+    color:  #808080;
+    font-family: 'DrukWideCyr-Medium', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    list-style: none;
+    padding: 0;
+    margin-top: 8px;
+}
+
+.teammate-list li {
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+
+@media (max-width: 1750px) {
+
+    .team-block > .block-title {
+        margin: 40px var(--padd) 0;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .team-block > .block-title {
+        position: relative;
+        margin: 24px var(--padd) 60px;
+    }
+}
+
+@media (max-width: 668px) {
+    .teammate-img {
+        background-size: auto 100%;
+    }
+
+}
+

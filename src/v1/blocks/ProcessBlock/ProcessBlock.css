@@ -1,0 +1,22 @@
+.process-block{
+    padding: 60px var(--padd) 137px;
+    position: relative;
+}
+
+
+.back-process-logo{
+    position: absolute;
+    width: 128vw;
+    max-width: calc(138vw - var(--padd) * 2);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--light-gray);
+}
+
+
+@media (max-width:900px) {
+    .process-block{
+        padding: 24px var(--padd) 60px;
+    }
+}

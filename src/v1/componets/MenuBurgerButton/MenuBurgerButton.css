@@ -1,0 +1,32 @@
+.menu-burger-button {
+    cursor: pointer;
+    user-select: none;
+    width: 32px;
+    height: 32px;
+    z-index: 101;
+}
+
+.line {
+    stroke: #1C1C1C;
+    stroke-width: 3;
+    stroke-linecap: round;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+    transform-box: fill-box;
+    transform-origin: 50% 50%;
+}
+
+.menu-burger-button.active .line.top {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-burger-button.active .line.middle {
+    opacity: 0;
+}
+
+.menu-burger-button.active .line.bottom {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width:961px) {
+
+}

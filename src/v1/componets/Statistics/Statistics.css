@@ -1,0 +1,32 @@
+.statistics{
+    position: relative;
+    width: 100%;
+    justify-self: stretch;
+}
+
+.statistics-cont{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    padding: 60px var(--padd) 160px;
+}
+
+
+@media (max-width:1750px) {
+    .statistics-cont{
+        padding: 40px var(--padd) 110px;
+    }
+
+}
+
+@media (max-width:900px) {
+    .statistics-cont {
+        padding: 80px var(--padd) 0;
+        top: unset;
+        position: relative;
+        gap: 24px;
+        transform: unset;
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+}

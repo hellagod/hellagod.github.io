@@ -1,0 +1,375 @@
+.streamer-item {
+    background: var(--black);
+    border-radius: 0 18px 18px 0;
+    height: 100%;
+    width: 75%;
+    position: relative;
+}
+
+.steamers-socials-item-link {
+    /*height: 100%;*/
+    display: flex;
+    align-items: center;
+    z-index: 2000;
+}
+
+.soc-icon {
+    transition: color 0.2s;
+    cursor: pointer;
+}
+
+.steamers-socials-item-link:hover > .soc-icon {
+    color: var(--light-gray);
+}
+
+.steamers-socials-item-link:active > .soc-icon {
+    color: var(--light-gray);
+}
+
+.streamer {
+    position: absolute;
+    display: flex;
+    height: 100%;
+    right: 60px;
+    bottom: 0;
+}
+
+
+.streamer-info {
+    padding: 60px 0 60px 200px;
+    position: relative;
+    z-index: 3;
+    width: 600px;
+
+}
+
+.streamer-back-logo {
+    width: 770px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    right: 50px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.streamer-img {
+    position: relative;
+    height: calc(100% + 60px);
+    transform: translate(0, -60px);
+    aspect-ratio: 1 / 1;
+    z-index: 100;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto 100%;
+    margin-right: -30px;
+}
+
+.streamer-title {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.streamer-real-name {
+    color: var(--gray);
+    text-align: left;
+    font-family: 'DrukWideCyr-Medium', sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+}
+
+.streamer-name {
+    color: var(--main);
+    text-align: left;
+    font-family: 'DrukWideCyr-Medium', sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.steamers-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 60px;
+}
+
+.soc-icon {
+    width: 40px;
+    color: var(--main);
+}
+
+.steamers-socials-item {
+    display: flex;
+    gap: 12px;
+    height: 40px;
+    align-items: center;
+    color: var(--gray);
+    text-align: left;
+    font-family: 'DrukWideCyr-Medium', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.streamer-about {
+    position: absolute;
+    bottom: 60px;
+    color: var(--gray);
+    text-align: left;
+    font-family: 'DrukWideCyr-Medium', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    max-width: 100%;
+}
+
+
+.streamer-back-logo > svg:last-child {
+    margin-top: -3%;
+}
+
+.streamer-circle {
+    background: var(--gray);
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    top: 32px;
+    right: 32px;
+    position: absolute;
+}
+
+
+.Dyrachyo {
+    background-image: url("../../assets/png/Dyrachyo.png");
+}
+
+.TpaBoMaH {
+    background-image: url("../../assets/png/TpaBoMaH.png");
+}
+
+.ybicanoooobov {
+    background-image: url("../../assets/png/ybicanoooobov.png");
+}
+
+.iltw1 {
+    background-image: url("../../assets/png/iltw1.png");
+}
+
+.Aunkere {
+    background-image: url("../../assets/png/Aunkere.png");
+}
+
+.Stray228 {
+    background-image: url("../../assets/png/Stray228.png");
+}
+
+.ct0m {
+    background-image: url("../../assets/png/ct0m.png");
+}
+
+.Rostikfacekid {
+    background-image: url("../../assets/png/Rostikfacekid.png");
+}
+
+/*.avice{*/
+/*    background-image: url("../../assets/png/avice.png");*/
+/*}*/
+
+/*.eevochka{*/
+/*    background-image: url("../../assets/png/eevochka.png");*/
+/*}*/
+
+.fcsm_kefir {
+    background-image: url("../../assets/png/fcsm_kefir.png");
+}
+
+.FORZOREZOR {
+    background-image: url("../../assets/png/FORZOREZOR.png");
+}
+
+.morphe_ya {
+    background-image: url("../../assets/png/morphe_ya.png");
+}
+
+.korya_mc {
+    background-image: url("../../assets/png/korya_mc.png");
+}
+
+.Sorabi_ {
+    background-image: url("../../assets/png/Sorabi_.png");
+}
+
+.Shadowkekw {
+    background-image: url("../../assets/png/Shadowkekw.png");
+}
+
+.by_owl {
+    background-image: url("../../assets/png/by_owl.png");
+}
+
+/*.Recrent{*/
+/*    background-image: url("../../assets/png/Recrent.png");*/
+/*}*/
+
+.gr0mjkeee {
+    background-image: url("../../assets/png/gr0mjkeee.png");
+}
+
+.leva2k {
+    background-image: url("../../assets/png/leva2k.png");
+}
+
+
+@media (max-width: 1750px) {
+    .streamer-real-name {
+        font-size: 20px;
+    }
+
+    .streamer-name {
+        font-size: 32px;
+    }
+
+    .steamers-socials-item {
+        font-size: 18px;
+        height: 36px;
+    }
+
+    .steamers-socials {
+        margin-top: 40px;
+    }
+
+    .soc-icon {
+        width: 36px;
+    }
+
+    .streamer-info {
+        padding: 40px 0 40px 200px;
+    }
+
+    .streamer-about {
+        bottom: 40px;
+    }
+
+    .streamer-back-logo {
+        width: 540px;
+        top: 60%;
+    }
+
+    .streamer-circle {
+        width: 16px;
+        height: 16px;
+        top: 14px;
+        right: 14px;
+    }
+
+
+}
+
+@media (max-width: 1370px) {
+    .streamer-about {
+        display: none;
+    }
+
+    .streamer-info {
+        width: 400px;
+    }
+}
+
+
+@media (max-width: 1100px) {
+
+    .streamer-item {
+        flex: 0 0 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 16px;
+        height: 550px;
+        width: 100%;
+        position: relative;
+    }
+
+    .steamers-socials {
+        margin-top: 30px;
+    }
+
+    .streamer-info {
+        width: 350px;
+        margin: 0 auto;
+        padding: 40px 0 0 16px;
+    }
+
+    .streamer-real-name {
+        font-size: 20px;
+    }
+
+    .steamers-socials {
+        gap: 8px;
+    }
+
+    .steamers-socials-item {
+        font-size: 16px;
+        height: 28px;
+        gap: 12px;
+    }
+
+
+    .soc-icon {
+        width: 28px;
+    }
+
+    .streamer-name {
+        font-size: 32px;
+    }
+
+    .streamer-back-logo {
+        max-width: 370px;
+        width: 90%;
+        bottom: 100px;
+    }
+
+    .streamer {
+        right: unset;
+    }
+
+    .streamer-img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        transform: none;
+        height: 350px;
+        z-index: 100;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: auto 100%;
+    }
+
+    .streamer-back-logo {
+        width: 90%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: unset;
+        bottom: 0px;
+    }
+}
+
+
+@media (max-width: 430px) {
+    .streamer-info {
+        width: 300px;
+    }
+
+    .streamer-img{
+        height: 300px;
+    }
+
+    .streamer-name {
+        font-size: 20px;
+    }
+
+}

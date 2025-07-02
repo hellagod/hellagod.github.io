@@ -1,0 +1,149 @@
+.streamers {
+    display: flex;
+    width: 100%;
+    position: relative;
+    height: 560px;
+}
+
+.streamer-button-cont {
+    display: flex;
+    flex-direction: column;
+    width: calc(25% + 14px);
+    height: 100%;
+    margin-left: -14px;
+    overflow-y: auto;
+    margin-right: var(--padd);
+}
+
+.streamer-button-cont::-webkit-scrollbar {
+    width: 12px;
+}
+
+.streamer-button-cont::-webkit-scrollbar-track {
+    background-color: var(--black);
+    width: 12px;
+    border-radius: 6px;
+}
+
+.streamer-button-cont::-webkit-scrollbar-thumb {
+    background-color: var(--gray);
+    border-radius: 6px;
+}
+
+.streamer-button {
+    margin: 16px 65px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: #d9d9d9;
+    text-align: left;
+    font-family: 'DrukWideCyr-Medium', sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+    min-height: 48px;
+    transition-property: background-color, color;
+    transition-duration: 0.1s;
+    cursor: pointer;
+}
+
+.streamer-button:hover, .streamer-button:active{
+    color: var(--main);
+}
+
+.streamer-button.active{
+    color: var(--main);
+}
+
+.streamers-arrow{
+    width: 30px;
+    top: 50%;
+    transform: translate(0, -50%);
+    position: absolute;
+    left: 350px;
+}
+
+
+.points{
+    display: none;
+}
+
+.prev-button,
+.next-button {
+    display: none;
+}
+
+@media (max-width: 1750px) {
+    .streamers {
+        height: 440px;
+    }
+    .streamer-button{
+        font-size: 18px;
+        min-height: unset;
+    }
+
+}
+
+/*@media (max-width: 1277px) {*/
+/*    .streamer-button-cont {*/
+/*        width: calc(50% + 14px);*/
+/*        min-height: 100%;*/
+/*        max-height: 100%;*/
+/*        margin-left: -14px;*/
+/*    }*/
+/*}*/
+
+@media (max-width: 1100px) {
+    .streamers {
+        height: 560px;
+    }
+    .points{
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .point{
+        background: var(--gray);
+        border-radius: 100%;
+        flex-shrink: 0;
+        width: 10px;
+        height: 10px;
+        position: relative;
+        transition: background-color 0.2s;
+    }
+
+    .point.active{
+        background: var(--black);
+    }
+
+
+    .slides-track {
+        display: flex;
+        gap: var(--padd);
+        width: 100%;
+        height: 100%;
+        transition: transform 0.5s ease-in-out;
+    }
+
+
+    .streamers{
+        gap: 22px;
+        flex-direction: column;
+        /*margin: 80px 0 0 0;*/
+        padding: 0 var(--padd);
+    }
+    .streamer-button-cont {
+        display: none;
+    }
+
+    .prev-button {
+        height: 50%;
+        left: 0;
+    }
+
+    .next-button {
+        right: 0;
+    }
+
+}

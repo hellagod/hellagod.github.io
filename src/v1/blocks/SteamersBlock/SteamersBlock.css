@@ -1,0 +1,40 @@
+.steamers-block{
+    width: 100%;
+    position: relative;
+}
+
+.steamers-block-content{
+    width: 100%;
+    position: relative;
+    padding: 1px 0 160px 0;
+    border-radius: 32px;
+}
+
+.steamers-block-back-video{
+    position: absolute;
+    width: 100%;     /* растягиваем по ширине контейнера */
+    height: 100%;    /* растягиваем по высоте контейнера */
+    object-fit: cover; /* сохранит пропорции, заполнив весь блок */
+    background: var(--black);
+    z-index: 0;
+    border-radius: 32px;
+}
+
+.steamers-block-content > .block-title{
+    margin: 60px var(--padd) 60px;
+}
+
+@media (max-width:900px) {
+    .steamers-block{
+        width: 100%;
+        padding: 40px 0;
+    }
+    .steamers-block-content{
+        padding: 1px 0 100px 0;
+        border-radius: 24px;
+    }
+
+    .steamers-block-content > .block-title{
+        margin: 24px var(--padd) 60px;
+    }
+}

@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+
+}
+
+div {
+    box-sizing: border-box;
+}
+
+:root {
+    /*--black: #090909;*/
+    /*--white: #FCFCFC;*/
+    /*--gray: #D9D9D9;*/
+    /*--brat: #CCF304;*/
+    /*--wine: #8420E8;*/
+    /*--bad-wine: #502B8C;*/
+    /*--red: #F64D4D;*/
+    /*--glass-wine: #47138A;*/
+    /*--wine-black-grad: linear-gradient(#411091, #200C41, #090909);*/
+    /*--header-back: rgba(9, 9, 9, 0.10);*/
+    --main: #FF4613;
+    --black: #1c1c1c;
+    --light-gray: #fafafa;
+    --gray: #d9d9d9;
+    --size-m: 1750px;
+    --padd: 80px;
+    --main-width: 80%;
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+input, textarea, a {
+    box-sizing: border-box;
+    all: unset;
+}
+
+textarea::-webkit-scrollbar {
+    width: 10px;
+}
+
+textarea::-webkit-scrollbar-track {
+    width: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: var(--black);
+    border-radius: 5px;
+}
+
+@media (min-width: 2000px) {
+
+    :root{
+        --padd: calc(calc(100vw - 1900px) / 2);
+
+    }
+}
+@media (max-width: 1750px) {
+
+    :root{
+        --padd: 40px;
+    }
+}
+@media (max-width: 900px) {
+
+    :root{
+        --padd: 16px;
+        --main-width: calc(100% - 32px)
+    }
+}

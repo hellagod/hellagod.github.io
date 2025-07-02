@@ -1,0 +1,167 @@
+.about {
+    width: 100%;
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+}
+
+.about > .block-title{
+    margin: 32px var(--padd) 0;
+}
+
+
+.about-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--black);
+    text-align: justify;
+    font-family: 'DrukWideCyr-Medium', sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+    margin: 60px var(--padd) 153px;
+    position: relative;
+}
+
+.about-text > div{
+    position: absolute;
+    width: 50%;
+    right: 0;
+    top: calc((100vw - var(--padd) * 2) / 19 * 5 * 0.886);
+}
+
+.about-logo {
+    z-index: 1;
+}
+
+.about-text > div {
+    flex: 1;
+}
+
+.about-tag > span {
+    margin-top: -13px;
+}
+
+.masked-video {
+    width: 100%;
+    aspect-ratio: 19 / 5;
+    object-fit: cover;
+    mask-image: url('../../assets/svg/logo.svg');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    -webkit-mask-image: url('../../assets/svg/logo.svg');
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+    z-index: 0;
+}
+
+.about-tags-cont {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.about-tag {
+    color: var(--light-gray);
+    text-align: center;
+    font-family: 'DrukWideCyr-Medium', sans-serif;
+    font-size: 48px;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    margin-left: 60px;
+    font-weight: 500;
+    position: relative;
+}
+
+.about-tag-circle {
+    width: 18px;
+    height: 18px;
+    background: var(--main);
+    border-radius: 50%;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.about-marquee{
+    background-color: var(--black);
+    display: flex;
+    height: 106px;
+}
+
+
+
+@media (max-width: 1750px) {
+    .about-text {
+        font-size: 18px;
+        line-height: normal;
+        margin: 40px var(--padd) 130px;
+    }
+
+    .about-marquee{
+        height: 72px;
+    }
+
+
+    .about-tag {
+        font-size: 32px;
+        gap: 40px;
+        margin-left: 40px;
+    }
+
+    .about-tag-circle {
+        width: 14px;
+        height: 14px;
+    }
+
+}
+
+
+@media (max-width: 900px) {
+    .about-logo {
+        height: 3em;
+    }
+    .about-text{
+        display: flex;
+        flex-direction: column;
+        padding: 40px var(--padd) 80px;
+        gap: 40px;
+        margin: unset;
+    }
+    .about-text > div {
+        position: relative;
+        font-size: 16px;
+        top: unset;
+        width: 100%;
+    }
+
+    .about-tags-cont {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .about-tag > span{
+        font-size: 18px;
+        margin-top: -5px;
+    }
+
+    .about-tag{
+        margin-left: 16px;
+        gap: 16px;
+    }
+
+    .about-marquee{
+        height: 48px;
+    }
+
+    .about-tag-circle {
+        width: 12px;
+        height: 12px;
+    }
+
+
+}

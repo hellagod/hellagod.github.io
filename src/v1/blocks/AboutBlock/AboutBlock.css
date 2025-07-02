@@ -1,0 +1,11 @@
+.about-block{
+    z-index: 1;
+    position: relative;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+
+@media (max-width:961px) {
+
+}

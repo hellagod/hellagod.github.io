@@ -1,0 +1,123 @@
+.contanct-block-cont{
+    padding: 60px var(--padd);
+}
+
+.contanct-block {
+    padding: 60px 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.contanct-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px
+}
+
+input, textarea {
+    box-sizing: border-box;
+    border-radius: 16px;
+    border-style: solid;
+    border-color: var(--black);
+    border-width: 1px;
+    width: 100%;
+    padding: 28px 32px 28px 32px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    color: var(--black);
+    text-align: left;
+    font-family: 'DrukWideCyr-Medium', sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+textarea::placeholder, input::placeholder{
+    color: var(--black);
+}
+
+
+.contanct-left {
+    align-self: stretch;
+    position: relative;
+    background: var(--light-gray);
+    border-radius: 24px;
+    padding: 64px;
+    align-items: flex-start;
+    text-align: left;
+    font-family: 'DrukWideCyr-Medium', sans-serif;
+    font-size: 64px;
+    font-weight: 500;
+    color: var(--black);
+}
+
+.contanct-left > span {
+    color: var(--main);
+}
+
+.contanct-circle {
+    background: var(--main);
+    border-radius: 50%;
+    flex-shrink: 0;
+    width: 21px;
+    height: 21px;
+    top: 30px;
+    right: 30px;
+    position: absolute;
+}
+
+
+@media (max-width: 1750px) {
+    .contanct-left{
+        font-size: 48px;
+    }
+
+    .contanct-block-cont {
+        padding: 40px var(--padd) 60px;
+    }
+
+    .contanct-block-cont {
+        padding-top: 40px;
+    }
+
+    .form-buttons{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .contanct-left{
+        font-size: 32px;
+        padding: 64px 16px;
+    }
+
+    .contanct-block{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    input, textarea{
+        font-size: 14px;
+        border-radius: 8px;
+        padding: 18px 16px;
+    }
+
+
+
+}

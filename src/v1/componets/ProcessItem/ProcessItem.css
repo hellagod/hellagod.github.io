@@ -1,0 +1,109 @@
+.process-item{
+    background: var(--black);
+    border-radius: 16px;
+    padding: 24px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.process-item-header{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.process-prefix{
+    color: var(--gray);
+    text-align: left;
+    font-family: 'DrukWideCyr-Medium', sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    position: relative;
+    align-self: stretch;
+}
+
+
+.process-title{
+    color: var(--main);
+    text-align: left;
+    font-family: 'DrukWideCyr-Medium', sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    position: relative;
+    align-self: stretch;
+}
+
+.process-text{
+    color: var(--gray);
+    width: fit-content;
+    text-align: left;
+    font-family: 'DrukWideCyr-Medium', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+}
+
+.process-circle{
+    background: var(--main);
+    border-radius: 50%;
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    left: 21px;
+    bottom: 21px;
+    position: absolute;
+}
+
+
+@media (max-width: 1750px) {
+    .process-item {
+        padding: 18px 22px;
+        gap: 22px;
+    }
+    .process-prefix, .process-title{
+        font-size: 26px;
+    }
+    .process-text{
+        font-size: 14px;
+        width: 333px;
+    }
+    .process-circle{
+        width: 16px;
+        height: 16px;
+        left: 16px;
+        bottom: 16px;
+    }
+}
+
+@media (max-width:900px) {
+    .process-item{
+        padding: 32px 16px 72px;
+        gap: 75px;
+        max-width: calc(100vw - 2 * var(--padd));
+    }
+    .process-prefix, .process-title{
+        font-size: 24px;
+    }
+
+    .process-text{
+        width: 100%;
+    }
+
+    .process-circle{
+        width: 16px;
+        height: 16px;
+        left: 14px;
+        bottom: 14px;
+    }
+}
+
