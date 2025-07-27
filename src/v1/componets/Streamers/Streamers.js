@@ -160,6 +160,6 @@ export default function Streamers() {
             </div>))}
         </div>
         {width < 1100 ? <CarouselDots totalItems={names.length} activeIndex={currentIndex}
-                      onNext={nextSlide} onPrev={prevSlide} visibleCount={7}/>:""}
+                      onNext={nextSlide} onPrev={prevSlide} visibleCount={11}/>:""}
     </div>);
 }
