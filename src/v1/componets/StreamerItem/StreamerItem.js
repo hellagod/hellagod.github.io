@@ -29,26 +29,29 @@ export default function StreamerItem({name, about, realName, socials}) {
             {logoBack}
         </div>
         <div className="streamer">
+            {/*<img className={`streamer-img`} src={imges[name]} alt=""/>*/}
+            <div className={`streamer-img ${name}`}></div>
             <div className="streamer-info">
-                <div className="streamer-title">
-                    <div className="streamer-real-name">
-                        {realName}
+                <div>
+                    <div className="streamer-title">
+                        <div className="streamer-real-name">
+                            {realName}
+                        </div>
+                        <div className="streamer-name" style={350 < width < 470 && name === "ybicanoooobov" ? {fontSize: 25} : {}}>
+                            {name}
+                        </div>
                     </div>
-                    <div className="streamer-name" style={350 < width < 470 && name === "ybicanoooobov" ? {fontSize: 25} : {}}>
-                        {name}
+                    <div className="steamers-socials">
+                        {socials.map(soc => <div className="steamers-socials-item">
+                            <a href={soc.url} className="steamers-socials-item-link">{soc.icon}</a>
+                            {soc.count}
+                        </div>)}
                     </div>
-                </div>
-                <div className="steamers-socials">
-                    {socials.map(soc => <div className="steamers-socials-item">
-                        <a href={soc.url} className="steamers-socials-item-link">{soc.icon}</a>
-                        {soc.count}
-                    </div>)}
                 </div>
                 <div className="streamer-about">
-                    {about}
+                    <span>{about}</span>
                 </div>
             </div>
-            <div className={`streamer-img ${name}`}/>
         </div>
         <div className="streamer-circle"/>
 

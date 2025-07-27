@@ -14,30 +14,18 @@ import TeamBlock from "../../blocks/TeamBlock/TeamBlock";
 import NewsBlock from "../../blocks/NewsBlock/NewsBlock";
 import CaseBlock from "../../blocks/CaseBlock/CaseBlock";
 
+
 const fontsToLoad = [
     {family: 'DrukWideCyr-Bold', weight: 700},
     {family: 'DrukWideCyr-Medium', weight: 500},
     {family: 'DrukWideCyr-Super', weight: 400},
 ];
 
-const bgImages = [
-    new URL('../../assets/png/about-back.png', import.meta.url).href,
-    new URL('../../assets/png/Aunkere.png', import.meta.url).href,
-    new URL('../../assets/png/bombbar.png', import.meta.url).href,
-    new URL('../../assets/png/Dyrachyo.png', import.meta.url).href,
-    new URL('../../assets/png/GoodWin.png', import.meta.url).href,
-    new URL('../../assets/png/iltw1.png', import.meta.url).href,
-    new URL('../../assets/png/main-back.png', import.meta.url).href,
-    new URL('../../assets/png/noize.png', import.meta.url).href,
-    new URL('../../assets/png/nuum.png', import.meta.url).href,
-    new URL('../../assets/png/Stray228.png', import.meta.url).href,
-    new URL('../../assets/png/TpaBoMaH.png', import.meta.url).href,
-    new URL('../../assets/png/ybicanoooobov.png', import.meta.url).href,
-];
-
 
 function App() {
-    const isReady = usePreloadImages(bgImages)
+
+
+    const isReady = usePreloadImages()
     const [isLoaded, setIsLoaded] = useState(false)
 
     useEffect(() => {
@@ -55,11 +43,7 @@ function App() {
             });
     }, []);
 
-    // useEffect(() => {
-    //     const matcher = window.matchMedia("(prefers-color-scheme: dark)");
-    //     setMode(matcher.matches)
-    //     matcher.onchange = () => setMode(matcher.matches);
-    // }, []);
+
 
     return <>
         <Helmet>
@@ -82,8 +66,8 @@ function App() {
                     <AboutBlock/>
                     <SteamersBlock/>
                     <ClientsBlock/>
-                    <CaseBlock/>
-                    <TeamBlock/>
+                    {/*<CaseBlock/>*/}
+                    {/*<TeamBlock/>*/}
                     <ProcessBlock/>
                     <NewsBlock/>
                     <ContanctBlock/>

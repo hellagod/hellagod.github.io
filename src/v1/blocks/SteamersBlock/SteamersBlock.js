@@ -4,7 +4,7 @@ import ArrowSubTitle from "../../componets/ArrowSubTitle/ArrowSubTitle";
 import BlockTitle from "../../componets/BlockTitle/BlockTitle";
 import Streamers from "../../componets/Streamers/Streamers";
 import {scrollTo} from "../../utils";
-import videoBackground from '../../assets/video/Gradient Lite.mp4';
+import videoBackground from '../../assets/video/Gradient Lite looped compressed.mp4';
 
 export default function SteamersBlock() {
     return <div id="streamers" className="steamers-block">

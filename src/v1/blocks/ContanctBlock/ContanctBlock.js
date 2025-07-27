@@ -42,10 +42,10 @@ export default function ContanctBlock() {
         <BlockTitle title="пишите нам" color="black"/>
         <div className="contanct-block">
             <div className="contanct-left">
-                Начни
-                <br/>успешное
-                <br/>продвижение
-                <br/>вместе
+                Начни{" "}
+                <br/>успешное{" "}
+                <br/>продвижение{" "}
+                <br/>вместе{" "}
                 <br/>c <span>
           gabe media
         </span>
@@ -64,6 +64,7 @@ export default function ContanctBlock() {
                     onChange={handleChange('name')}
                     name="name"
                     placeholder="ваше имя"
+                    className="input-contact"
                     required
                 />
                 <input
@@ -72,6 +73,7 @@ export default function ContanctBlock() {
                     onChange={handleChange('phone')}
                     name="phone"
                     placeholder="номер телефона"
+                    className="input-contact"
                     required
                 />
                 <input
@@ -80,12 +82,14 @@ export default function ContanctBlock() {
                     onChange={handleChange('email')}
                     name="email"
                     placeholder="e‑mail"
+                    className="input-contact"
                     required
                 />
                 <textarea
                     placeholder="описание задачи"
                     value={form.description}
                     onChange={handleChange('description')}
+                    className="input-contact"
                     name="description"
                 />
                 <div className="form-buttons">
@@ -99,6 +103,7 @@ export default function ContanctBlock() {
                         name="обсудить в tg"
                         color="main"
                         back="black"
+
                         onClick={() => sendWith('tg')}
                     />
                 </div>

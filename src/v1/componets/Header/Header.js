@@ -17,6 +17,8 @@ export default function Header() {
 
     useEffect(() => {
         document.body.style.overflow = isMenuOpen ? 'hidden' : '';
+        if (isMenuOpen)
+            scrollTo("root")
         return () => {
             document.body.style.overflow = '';
         };
@@ -40,16 +42,16 @@ export default function Header() {
                 scrollTo("clients", "center")
             }}> клиенты
             </div>
-            <div className="menu-item" onClick={() => {
-                setIsMenuOpen(false);
-                scrollTo("cases", "center")
-            }}> кейсы
-            </div>
-            <div className="menu-item" onClick={() => {
-                setIsMenuOpen(false);
-                scrollTo("team", "center")
-            }}> команда
-            </div>
+            {/*<div className="menu-item" onClick={() => {*/}
+            {/*    setIsMenuOpen(false);*/}
+            {/*    scrollTo("cases", "center")*/}
+            {/*}}> кейсы*/}
+            {/*</div>*/}
+            {/*<div className="menu-item" onClick={() => {*/}
+            {/*    setIsMenuOpen(false);*/}
+            {/*    scrollTo("team", "center")*/}
+            {/*}}> команда*/}
+            {/*</div>*/}
         </div>
     }
 

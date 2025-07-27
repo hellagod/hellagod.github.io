@@ -32,6 +32,7 @@
     height: 100%;
     right: 60px;
     bottom: 0;
+    flex-direction: row-reverse;
 }
 
 
@@ -280,15 +281,20 @@
 
 @media (max-width: 1100px) {
 
+    .streamer-info > div:first-child {
+        margin-left: var(--padd);
+    }
+
     .streamer-item {
         flex: 0 0 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 16px;
-        height: 550px;
         width: 100%;
         position: relative;
+        background: transparent;
+        padding: 0;
     }
 
     .steamers-socials {
@@ -296,10 +302,13 @@
     }
 
     .streamer-info {
-        width: 350px;
-        margin: 0 auto;
-        padding: 40px 0 0 16px;
+        /*width: 350px;*/
+        /*margin: 0 auto;*/
+        width: 100%;
+        padding: 1px 0 0 0;
+        z-index: 100;
     }
+
 
     .streamer-real-name {
         font-size: 20px;
@@ -315,6 +324,24 @@
         gap: 12px;
     }
 
+    .streamer-about {
+        z-index: 999;
+        position: absolute;
+        bottom: 0;
+        background-color: var(--black);
+        height: 200px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 24px;
+    }
+
+    .streamer-about > span {
+        width: 400px;
+        text-align: center;
+        font-size: 15px;
+    }
 
     .soc-icon {
         width: 28px;
@@ -332,6 +359,7 @@
 
     .streamer {
         right: unset;
+        width: 100%;
     }
 
     .streamer-img {
@@ -341,7 +369,7 @@
         right: 0;
         margin: 0 auto;
         transform: none;
-        height: 350px;
+        height: 450px;
         z-index: 100;
         background-repeat: no-repeat;
         background-position: center center;
@@ -350,23 +378,64 @@
 
     .streamer-back-logo {
         width: 90%;
+        /*min-width: 450px;*/
+        max-width: unset;
+        transform: unset;
         left: 0;
         right: 0;
         margin: 0 auto;
         top: unset;
-        bottom: 0px;
+        bottom: 100px;
+        /*position: fixed;*/
+    }
+
+    .streamer-img {
+        height: 550px;
+        aspect-ratio: unset;
+    }
+
+
+}
+
+
+@media (max-width: 900px) {
+    .streamer-circle {
+        display: none;
+    }
+
+    .streamer-about {
+        z-index: 999;
+        position: absolute;
+        bottom: 0;
+        background-color: var(--black);
+        height: 150px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 24px;
+    }
+
+    .streamer-about > span {
+        width: 350px;
+        text-align: center;
+        font-size: 13px;
+    }
+
+    .streamer-img{
+        border-radius: 0 0 24px 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .streamer-img {
+        height: 450px;
+        aspect-ratio: unset;
     }
 }
 
 
 @media (max-width: 430px) {
-    .streamer-info {
-        width: 300px;
-    }
-
-    .streamer-img{
-        height: 300px;
-    }
 
     .streamer-name {
         font-size: 20px;

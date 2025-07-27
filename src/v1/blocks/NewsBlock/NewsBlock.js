@@ -5,7 +5,6 @@ import BlockTitle from "../../componets/BlockTitle/BlockTitle";
 import {ReactComponent as ArrowRight} from "../../assets/svg/arrow-button-right.svg";
 import {ReactComponent as ArrowLeft} from "../../assets/svg/arrow-button-left.svg";
 import {ReactComponent as Close} from "../../assets/svg/close.svg";
-import ReactMarkdown from "react-markdown";
 import Slider from "react-slick";
 import {scrollTo} from "../../utils";
 import ArrowSubTitle from "../../componets/ArrowSubTitle/ArrowSubTitle";
@@ -15,6 +14,7 @@ export default function NewsBlock() {
     const [modalItem, setModalItem] = useState(null);
     const {width} = useScreenSize();
     let sliderRef = useRef(null);
+
     const next = () => {
         sliderRef.slickNext();
     };
@@ -30,7 +30,6 @@ export default function NewsBlock() {
         centerMode: false,
     };
 
-
     return (<div id="news" className="news-block">
         <BlockTitle title="новости" color="black"/>
 
@@ -39,8 +38,6 @@ export default function NewsBlock() {
             <ArrowRight className="arrow-button" onClick={next}/>
 
         </div>
-
-
         <Slider ref={slider => {
             sliderRef = slider;
         }} {...settings}>
@@ -48,7 +45,10 @@ export default function NewsBlock() {
                 style={{width: width <= 900 ? 323 : 710}}
                 key={item.id}
                 className="news-block__item"
-                onClick={() => setModalItem(item)}
+                onClick={() => {
+                    setModalItem(item);
+                    document.body.style.overflowY = 'hidden';
+                }}
             >
                 <img
                     src={item.image}
@@ -58,7 +58,7 @@ export default function NewsBlock() {
                 <div className="news-block__info">
                     <div className="news-block__date">{item.date}</div>
                     <div className="news-block__title">{item.title}</div>
-                    <div className="news-block__preview">{item.preview} <span className="news-block__read">
+                    <div className="news-block__preview">{item.preview.slice(0, width <= 900 ? 100 : 170)}...<span className="news-block__read">
                 читать далее
               </span></div>
 
@@ -68,7 +68,10 @@ export default function NewsBlock() {
 
         {modalItem && (<div
             className="news-modal"
-            onClick={() => setModalItem(null)}
+            onClick={() => {
+                setModalItem(null)
+                document.body.style.overflowY = 'auto';
+            }}
         >
             <div
                 className="news-modal__content"
@@ -76,7 +79,10 @@ export default function NewsBlock() {
             >
                 <Close
                     className="news-modal__close"
-                    onClick={() => setModalItem(null)}
+                    onClick={() => {
+                        setModalItem(null)
+                        document.body.style.overflowY = 'auto';
+                    }}
                 />
                 <img
                     src={modalItem.image}
@@ -90,7 +96,7 @@ export default function NewsBlock() {
                             <span>{modalItem.date}</span>
                         </div>
                         <div className="news-modal__body">
-                            <ReactMarkdown>{modalItem.content}</ReactMarkdown>
+                            {modalItem.content}
                         </div>
                     </div>
                 </div>

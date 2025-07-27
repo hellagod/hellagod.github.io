@@ -175,13 +175,14 @@
 @media (max-width:1201px) {
     .header{
         padding-top: 16px;
+        padding-bottom: 46px;
     }
     .logo {
         width: 122px;
     }
     .menu{
         flex-direction: column;
-        gap: 30px
+        /*gap: 30px*/
     }
 }
 

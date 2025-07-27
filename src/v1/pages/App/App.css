@@ -22,7 +22,6 @@
 
 .main-back{
     position: absolute;
-    background-image: url("../../assets/png/main-back.png");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;

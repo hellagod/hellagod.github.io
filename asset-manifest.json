@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "./static/css/main.40580bde.css",
-    "main.js": "./static/js/main.6e3acd9b.js",
-    "static/media/Gradient Lite.mp4": "./static/media/Gradient Lite.1f2bcd02432c1d905d3b.mp4",
+    "main.css": "./static/css/main.9bafae05.css",
+    "main.js": "./static/js/main.bf62428b.js",
+    "static/media/Gradient Lite looped compressed.mp4": "./static/media/Gradient Lite looped compressed.50ff6dbe05e733bd79a6.mp4",
     "static/media/case-ex.png": "./static/media/case-ex.275a0e2fdc745e0e3b13.png",
     "static/media/team.png": "./static/media/team.e682f51cb0fcd6f2938b.png",
     "static/media/noize.png": "./static/media/noize.9365fb283de34180cc1c.png",
+    "static/media/mood.png": "./static/media/mood.4d09a0c2d61058f1079f.png",
     "static/media/iltw1.png": "./static/media/iltw1.0dc17671a479997a40c4.png",
     "static/media/TpaBoMaH.png": "./static/media/TpaBoMaH.a0e0989fed63e17e495d.png",
-    "static/media/mood.png": "./static/media/mood.dc398505ac69f875f02c.png",
     "static/media/Shadowkekw.png": "./static/media/Shadowkekw.e74c97289407fe51daf5.png",
     "static/media/ct0m.png": "./static/media/ct0m.88a3f56b9757a2ccfd27.png",
     "static/media/FORZOREZOR.png": "./static/media/FORZOREZOR.8aa571399b2e990161aa.png",
     "static/media/Dyrachyo.png": "./static/media/Dyrachyo.f833b9d44bbafc36559a.png",
+    "static/media/ILTW.png": "./static/media/ILTW.f8c0c05501e73db8599f.png",
     "static/media/Stray228.png": "./static/media/Stray228.ec62815a2151d0e42081.png",
     "static/media/korya_mc.png": "./static/media/korya_mc.fe4700a4ba3bf268631c.png",
     "static/media/ybicanoooobov.png": "./static/media/ybicanoooobov.e95fad1d81c55d47819a.png",
@@ -25,15 +26,20 @@
     "static/media/by_owl.png": "./static/media/by_owl.ea15a15e1e168dc38cca.png",
     "static/media/Sorabi_.png": "./static/media/Sorabi_.c5b0e9cd14d67dc8509b.png",
     "static/media/leva2k.png": "./static/media/leva2k.29bd6d5578954a14d944.png",
+    "static/media/news-2.png": "./static/media/news-2.1dc0f7b58f3311cfccdd.png",
+    "static/media/news-4.png": "./static/media/news-4.2005fe43b1667bf53ef4.png",
+    "static/media/news-1.png": "./static/media/news-1.9dccce096f735b3c9510.png",
     "static/media/testnews.jpg": "./static/media/testnews.617a4e35a4399aa1ecb6.jpg",
+    "static/media/news-5.png": "./static/media/news-5.8b955d0501854458655d.png",
     "static/media/main-back.png": "./static/media/main-back.f3897f99ad53970a78a4.png",
+    "static/media/news-3.png": "./static/media/news-3.0eee4eae4f1e41c0d98c.png",
     "static/media/GoodWin.png": "./static/media/GoodWin.98b1d77681eacc876c05.png",
     "static/media/Druk Wide-Bold-Web.woff2": "./static/media/Druk Wide-Bold-Web.2a7f84f2a87176716adf.woff2",
     "static/media/Druk Wide-Super-Web.woff2": "./static/media/Druk Wide-Super-Web.c95c2e7bffd4f4936250.woff2",
     "static/media/Druk Wide-Medium-Web.woff2": "./static/media/Druk Wide-Medium-Web.04e08a0d399c1a3ea7d7.woff2",
     "static/media/teammate-ex.png": "./static/media/teammate-ex.4ca3350b87cb0db1239d.png",
     "static/media/logo.svg": "./static/media/logo.ed0a7754412fb80fe5fabd5f661aaf22.svg",
-    "static/media/yt.svg": "./static/media/yt.6c550fc96a413bfc47a1ddc0e46e99b3.svg",
+    "static/media/yt.svg": "./static/media/yt.db76ac73d950b42418c3515d4bdb0b7a.svg",
     "index.html": "./index.html",
     "static/media/tg.svg": "./static/media/tg.329e1bdc6592dfa258201f98baa04f4f.svg",
     "static/media/tw.svg": "./static/media/tw.a9106d7abadbc86f583bc8362d310c6c.svg",
@@ -41,11 +47,13 @@
     "static/media/close.svg": "./static/media/close.50e1d38bd5f092c6106d51a756cdee52.svg",
     "static/media/arrow-button-left.svg": "./static/media/arrow-button-left.8b36799ba6096cd1a3435eeb1bc0d29b.svg",
     "static/media/arrow.svg": "./static/media/arrow.11ef453daa87774f11c6a38eeded73b5.svg",
-    "main.40580bde.css.map": "./static/css/main.40580bde.css.map",
-    "main.6e3acd9b.js.map": "./static/js/main.6e3acd9b.js.map"
+    "static/media/arrow-l.svg": "./static/media/arrow-l.f6a00755a5a30d0e8e30d0ea2be8ea64.svg",
+    "static/media/arrow-r.svg": "./static/media/arrow-r.03bc42fd43d40d30cef4c9c7ec7bf5eb.svg",
+    "main.9bafae05.css.map": "./static/css/main.9bafae05.css.map",
+    "main.bf62428b.js.map": "./static/js/main.bf62428b.js.map"
   },
   "entrypoints": [
-    "static/css/main.40580bde.css",
-    "static/js/main.6e3acd9b.js"
+    "static/css/main.9bafae05.css",
+    "static/js/main.bf62428b.js"
   ]
 }

@@ -29,6 +29,6 @@ export default function ClientsBlock() {
 
 
         </div>
-        <ArrowSubTitle title="кейсы" isBlack={true} onClick={() => scrollTo("cases", "center")}/>
+        <ArrowSubTitle title="процесс" isBlack={true} onClick={() => scrollTo("process", "center")}/>
     </div>
 }

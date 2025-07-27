@@ -2,7 +2,7 @@ import React from 'react';
 import './About.css';
 import BlockTitle from "../BlockTitle/BlockTitle";
 import Marquee from "react-fast-marquee";
-import videoBackground from "../../assets/video/Gradient Lite.mp4";
+import videoBackground from "../../assets/video/Gradient Lite looped compressed.mp4";
 
 export default function About() {
     return <div className="about">
@@ -14,8 +14,8 @@ export default function About() {
                    muted playsInline
             />
 
-            <div>
-                — это рекламное агентство полного цикла, опытная команда, которая сопровождает вас на всех этапах, от разработки стратегии до успешного запуска рекламных кампаний в сфере игр, стриминга и киберспорта
+            <div className="about-text-div">
+                — это опытная команда, которая сопровождает вас на всех этапах, от разработки стратегии до успешного запуска рекламных кампаний в сфере игр, стриминга и киберспорта
             </div>
         </div>
         <Marquee className="about-marquee" autoFill={true}>

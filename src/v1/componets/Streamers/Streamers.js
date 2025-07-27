@@ -3,6 +3,7 @@ import "./Streamers.css";
 import StreamerItem from "../StreamerItem/StreamerItem";
 import streamers from "./streamers_data";
 import useScreenSize from "../../hooks/useScreenSize";
+import CarouselDots from "../CarouselDots/CarouselDots";
 
 const autoSlideIntervalMs = 5_000;
 const PAUSE_DELAY = 10_000;
@@ -27,7 +28,7 @@ export default function Streamers() {
 
     const startAutoSlide = () => {
         stopAutoSlide();
-        autoDelaySlideRef.current = setTimeout(()=> {
+        autoDelaySlideRef.current = setTimeout(() => {
             autoSlideRef.current = setInterval(() => {
                 nextSlide();
             }, autoSlideIntervalMs);
@@ -39,7 +40,7 @@ export default function Streamers() {
             clearInterval(autoSlideRef.current);
             autoSlideRef.current = null;
         }
-        if (autoDelaySlideRef.current){
+        if (autoDelaySlideRef.current) {
             clearTimeout(autoDelaySlideRef.current)
             autoDelaySlideRef.current = null;
         }
@@ -158,14 +159,7 @@ export default function Streamers() {
                 {name}
             </div>))}
         </div>
-        {/*<div className="points">*/}
-        {/*    {names.map((name, index) => <div*/}
-        {/*        className={`point ${index === currentIndex ? "active" : ""}`}*/}
-        {/*        onClick={() => {*/}
-        {/*            setCurrentIndex(index);*/}
-        {/*            stopAutoSlide();*/}
-        {/*            startAutoSlide();*/}
-        {/*        }}/>)}*/}
-        {/*</div>*/}
+        {width < 1100 ? <CarouselDots totalItems={names.length} activeIndex={currentIndex}
+                      onNext={nextSlide} onPrev={prevSlide} visibleCount={7}/>:""}
     </div>);
 }

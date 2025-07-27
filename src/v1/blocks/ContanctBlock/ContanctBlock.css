@@ -100,8 +100,45 @@ textarea::placeholder, input::placeholder{
     }
 }
 
+@media (max-width: 1300px) {
+    .contanct-left{
+        font-size: 40px;
+    }
+
+}
+
+
+@media (max-width: 1200px) {
+    .contanct-left{
+        font-size: 32px;
+    }
+
+    .contanct-block {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .contanct-left > br{
+        display: none;
+    }
+
+    .contanct-left > br:nth-child(3){
+        display: block;
+    }
+
+    .contanct-left{
+        padding-left: 32px;
+    }
+}
+
+
 
 @media (max-width: 900px) {
+
+    .contanct-left > br{
+        display: block;
+    }
+
     .contanct-left{
         font-size: 32px;
         padding: 64px 16px;

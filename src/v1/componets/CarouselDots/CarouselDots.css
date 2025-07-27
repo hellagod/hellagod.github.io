@@ -1,0 +1,80 @@
+/* Контейнер для стрелок и точек */
+.carousel-pagination {
+    display: flex;                    /* Flexbox для выравнивания в ряд */
+    align-items: center;              /* Вертикальное центрирование */
+    justify-content: center;          /* Горизонтальное центрирование */
+    gap: 10px;
+    position: absolute;
+    z-index: 999;
+    bottom: 205px;
+    left: 0; right: 0;
+    margin: auto;
+}
+
+/* Общий стиль для кнопок-стрелок */
+.carousel-arrow {
+    display: inline-flex;             /* inline-flex для корректного размера */
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    padding: 0;
+}
+
+.carousel-arrow:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.carousel-dots {
+    display: flex;
+    gap: 12px;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    background-color: var(--black);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Активная точка */
+.carousel-dot--active-0 {
+    animation: dotAnim0 0.3s ease-in-out forwards;
+}
+
+.carousel-dot--active-1 {
+    animation: dotAnim1 0.3s ease-in-out forwards;
+
+}
+
+@media (max-width: 900px) {
+    .carousel-pagination {
+        bottom: 155px;
+    }
+
+
+
+}
+
+@keyframes dotAnim0 {
+    from {
+        background-color: var(--black);
+    }
+    to {
+        background-color: var(--main);
+    }
+}
+
+@keyframes dotAnim1 {
+    from {
+        background-color: var(--black);
+    }
+    to {
+        background-color: var(--main);
+    }
+}

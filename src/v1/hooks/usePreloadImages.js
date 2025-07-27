@@ -1,20 +1,30 @@
-// hooks/usePreloadImages.js
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
+import imges from "../assets/png";
 
-export default function usePreloadImages(urls = []) {
+const urls = [
+    ...Object.values(imges)
+]
+
+export default function usePreloadImages() {
     const [ready, setReady] = useState(false);
 
     useEffect(() => {
-        if (!urls.length) return;
+        if (urls.length === 0) {
+            setReady(true);
+            return;
+        }
 
-        let loaded = 0;
-        urls.forEach(src => {
-            const img = new Image();
-            img.onload = img.onerror = () => {
-                if (++loaded === urls.length) setReady(true);
-            };
-            img.src = src;
-        });
+        Promise
+            .all(
+                urls.map(src =>
+                    new Promise(res => {
+                        const img = new Image();
+                        img.onload = img.onerror = () => res();
+                        img.src = src;
+                    })
+                )
+            )
+            .then(() => setReady(true));
     }, [urls]);
 
     return ready;
