@@ -11,7 +11,6 @@
 .mood-img{
     width: 100%;
     border-radius: 32px;
-    min-height: 560px;
     background-image: url("../../assets/png/mood.png");
     background-position: center;
     flex: 1;
@@ -76,7 +75,6 @@
         border-radius: 50%;
     }
     .mood-img{
-        min-height: 640px;
         border-radius: 24px;
         background-position: right 30% top;
     }
