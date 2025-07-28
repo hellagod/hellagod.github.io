@@ -26,17 +26,17 @@
 /*    animation: blink ease-in-out 1s forwards;*/
 /*}*/
 
-@keyframes blink {
-    0%{
-        height: 100%;
-    }
-    50%{
-        height: 0;
-    }
-    100%{
-        height: 100%;
-    }
-}
+/*@keyframes blink {*/
+/*    0%{*/
+/*        height: 100%;*/
+/*    }*/
+/*    50%{*/
+/*        height: 0;*/
+/*    }*/
+/*    100%{*/
+/*        height: 100%;*/
+/*    }*/
+/*}*/
 
 .process-item-header{
     display: flex;
