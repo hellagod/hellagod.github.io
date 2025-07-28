@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.dea7f907.css",
-    "main.js": "./static/js/main.ad6cfe4e.js",
+    "main.js": "./static/js/main.9e675c93.js",
     "static/media/Gradient Lite looped compressed.mp4": "./static/media/Gradient Lite looped compressed.50ff6dbe05e733bd79a6.mp4",
     "static/media/case-ex.png": "./static/media/case-ex.275a0e2fdc745e0e3b13.png",
     "static/media/team.png": "./static/media/team.e682f51cb0fcd6f2938b.png",
@@ -50,10 +50,10 @@
     "static/media/arrow-l.svg": "./static/media/arrow-l.f6a00755a5a30d0e8e30d0ea2be8ea64.svg",
     "static/media/arrow-r.svg": "./static/media/arrow-r.03bc42fd43d40d30cef4c9c7ec7bf5eb.svg",
     "main.dea7f907.css.map": "./static/css/main.dea7f907.css.map",
-    "main.ad6cfe4e.js.map": "./static/js/main.ad6cfe4e.js.map"
+    "main.9e675c93.js.map": "./static/js/main.9e675c93.js.map"
   },
   "entrypoints": [
     "static/css/main.dea7f907.css",
-    "static/js/main.ad6cfe4e.js"
+    "static/js/main.9e675c93.js"
   ]
 }

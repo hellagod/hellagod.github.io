@@ -4,12 +4,14 @@ import StreamerItem from "../StreamerItem/StreamerItem";
 import streamers from "./streamers_data";
 import useScreenSize from "../../hooks/useScreenSize";
 import CarouselDots from "../CarouselDots/CarouselDots";
+import StreamerButtom from "../StreamerButtom/StreamerButtom";
 
 const autoSlideIntervalMs = 5_000;
 const PAUSE_DELAY = 10_000;
 
 export default function Streamers() {
     const {width} = useScreenSize();
+    const ref = useRef(null);
 
     const names = Object.keys(streamers);
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -25,6 +27,28 @@ export default function Streamers() {
     const prevSlide = () => {
         setCurrentIndex((prev) => (prev - 1 + names.length) % names.length);
     };
+
+
+    useEffect(() => {
+        if (ref.current) {
+            const classNames = ['streamer-button'];
+            const selector = classNames.map(c => `.${c}`).join(', ');
+            const elements = document.querySelectorAll(selector);
+
+
+            const onScroll = () => {
+                elements.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top + 100 < window.innerHeight && rect.bottom > 0) {
+                        el.classList.add('animate');
+                    }
+                });
+            };
+
+            ref.current.addEventListener('scroll', onScroll, {passive: true});
+            onScroll();
+        }
+    }, [])
 
     const startAutoSlide = () => {
         stopAutoSlide();
@@ -146,20 +170,14 @@ export default function Streamers() {
         >
         </button>
 
-        <div className="streamer-button-cont">
-            {names.map((name, index) => (<div
-                key={name}
-                className={`streamer-button ${index === currentIndex ? "active" : ""}`}
-                onClick={() => {
-                    setCurrentIndex(index);
-                    stopAutoSlide();
-                    startAutoSlide();
-                }}
-            >
-                {name}
-            </div>))}
+        <div className="streamer-button-cont" ref={ref}>
+            {names.map((name, index) => (<StreamerButtom name={name} onClick={() => {
+                setCurrentIndex(index);
+                stopAutoSlide();
+                startAutoSlide();
+            }} isActive={index === currentIndex}/>))}
         </div>
         {width < 1100 ? <CarouselDots totalItems={names.length} activeIndex={currentIndex}
-                      onNext={nextSlide} onPrev={prevSlide} visibleCount={11}/>:""}
+                                      onNext={nextSlide} onPrev={prevSlide} visibleCount={11}/> : ""}
     </div>);
 }
