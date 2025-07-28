@@ -281,7 +281,7 @@
 @media (max-width: 900px) {
 
     .news-modal-text-cont{
-        height: calc(max(80vh, 490px) - 340px);
+        height: calc(max(80vh, 400px) - 255px);
     }
     .slick-slide {
         margin: 0 8px;
