@@ -1,0 +1,1 @@
+@layer components{.home-page{inline-size:100%}.home-page:has(.site-catalog[data-expanded=true]){--hero-active-opacity:1}}
